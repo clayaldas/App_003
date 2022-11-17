@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">App_003</string>
 
-    <string name="textView_text_title">App_003</string>
+    <string name="textView_text_title">Ingresar al sistema</string>
 
     <string name="editText_hint_username">Ingrese el usuario</string>
     <string name="editText_hint_password">Ingrese la clave</string>
