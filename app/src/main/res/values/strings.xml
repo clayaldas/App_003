@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">App_003</string>
 
+    <!--    MainActity-->
     <string name="textView_text_title">Ingresar al sistema</string>
-
     <string name="editText_hint_username">Ingrese el usuario</string>
     <string name="editText_hint_password">Ingrese la clave</string>
-
     <string name="button_text_ok">Aceptar</string>
+
+    <!--    SecondAcitivity-->
+    <string name="buttonShowBrowser_text">Mostrar el navegador</string>
+    <string name="buttonCallPhoneNumber_text">Hacer llamada</string>
+    <string name="buttonShowActivity_text">Mostrar activity</string>
+    <string name="buttonFinish_text">Finalizar</string>
+
+<!--    ThirdActivity-->
+    <string name="textViewValueList_text">Lista de valores</string>
 
 </resources>

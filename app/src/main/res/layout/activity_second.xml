@@ -12,4 +12,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+
+    <Button
+        android:id="@+id/buttonShowBrowser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick_buttonShowBrowser"
+        android:text="@string/buttonShowBrowser_text" />
+
+    <Button
+        android:id="@+id/buttonCallPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick_buttonCallPhoneNumber"
+        android:text="@string/buttonCallPhoneNumber_text" />
+
+    <Button
+        android:id="@+id/buttonShowActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick_buttonShowActivity"
+        android:text="@string/buttonShowActivity_text" />
+
+    <Button
+        android:id="@+id/buttonFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick_buttonFinish"
+        android:text="@string/buttonFinish_text" />
 </LinearLayout>
