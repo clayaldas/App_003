@@ -1,7 +1,14 @@
 package fisei.uta.edu.ec.app_003;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +23,8 @@ public class SecondActivity extends AppCompatActivity {
     private Button buttonCallPhoneNumber;
     private Button buttonShowActivity;
     private Button buttonFinish;
+
+    private int code = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +56,18 @@ public class SecondActivity extends AppCompatActivity {
         //Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
         Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
-
     }
 
     public void onClick_buttonFinish (View view) {
         finish();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+      super.onActivityResult(requestCode, resultCode, data);
+
+        if ((code == requestCode ) && (resultCode == RESULT_OK)) {
+            textViewTitle.setText(data.getDataString());
+        }
     }
 }
