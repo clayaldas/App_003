@@ -26,6 +26,19 @@ public class SecondActivity extends AppCompatActivity {
 
     private int code = 1;
 
+    ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult result) {
+            // comprobar si la ventana hija (ThirdActivity) se cerro correctamente
+            if (result.getResultCode() == Activity.RESULT_OK) {
+                Intent data = result.getData();
+                textViewTitle.setText(data.getDataString());
+            }
+        }
+    });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +68,14 @@ public class SecondActivity extends AppCompatActivity {
     public void onClick_buttonShowActivity (View view) {
         //Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
         Intent intent = new Intent(this, ThirdActivity.class);
-        startActivity(intent);
+
+//        startActivity(intent);
+
+        // iniciar una actividad para regresar datos (forma antigua)
+//        startActivityForResult(intent, code);
+
+        // iniciar el activity que va a regresar datos (forma nueva)
+        activityResult.launch(intent);
     }
 
     public void onClick_buttonFinish (View view) {
@@ -65,9 +85,11 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
       super.onActivityResult(requestCode, resultCode, data);
-
+/*
         if ((code == requestCode ) && (resultCode == RESULT_OK)) {
             textViewTitle.setText(data.getDataString());
         }
+
+ */
     }
 }
