@@ -13,7 +13,28 @@
     <string name="buttonShowActivity_text">Mostrar activity</string>
     <string name="buttonFinish_text">Finalizar</string>
 
-<!--    ThirdActivity-->
+    <!--    ThirdActivity-->
     <string name="textViewValueList_text">Lista de valores</string>
+
+    <!--    para las opciones del menu principal-->
+    <string name="menu_insert">Insertar</string>
+    <string name="menu_delete">Eliminar</string>
+    <string name="menu_update">Modificar</string>
+    <string name="menu_search">Buscar</string>
+    <string name="menu_open">Abrir</string>
+
+    <string name="menu_edit">Editar</string>
+    <string name="menu_edit_cut">Cortar</string>
+    <string name="menu_edit_copy">Copiar</string>
+    <string name="menu_edit_paste">Pegar</string>
+
+    <string name="menu_find">Buscar texto</string>
+    <string name="menu_find_normal">Normal</string>
+    <string name="menu_find_replace">Remplazar</string>
+
+<!--    para las opciones del menu contextual-->
+    <string name="menu_contextual_cut">Cortar</string>
+    <string name="menu_contextual_copy">Copiar</string>
+    <string name="menu_contextual_paste">Pegar</string>
 
 </resources>

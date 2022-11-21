@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_insert"  android:title="@string/menu_insert"
+        android:icon="@android:drawable/ic_input_add" app:showAsAction="ifRoom"
+        android:tooltipText="@string/menu_insert"
+        tools:targetApi="o" />
+
+    <item android:id="@+id/menu_delete"  android:title="@string/menu_delete"
+        android:icon="@android:drawable/ic_input_delete" app:showAsAction="ifRoom"
+        android:tooltipText="@string/menu_delete"/>
+
+    <item android:id="@+id/menu_update"  android:title="@string/menu_update"
+        android:icon="@android:drawable/ic_input_get" app:showAsAction="ifRoom"
+        android:tooltipText="@string/menu_update"/>
+
+    <item android:id="@+id/menu_search"  android:title="@string/menu_search"
+        android:icon="@android:drawable/ic_menu_search" app:showAsAction="never"
+        android:tooltipText="@string/menu_search"/>
+
+    <item
+        android:id="@+id/menu_open"
+        android:title="@string/menu_open"
+        app:showAsAction="ifRoom" />
+
+<!--    submenus-->
+    <item android:id="@+id/menu_edit" android:title="@string/menu_edit"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:id="@+id/group_main">
+                <item
+                    android:id="@+id/menu_edit_cut"
+                    android:title="@string/menu_edit_cut"
+                    app:showAsAction="ifRoom" />
+                <item
+                    android:id="@+id/menu_edit_copy"
+                    android:title="@string/menu_edit_copy"
+                    app:showAsAction="ifRoom" />
+                <item
+                    android:id="@+id/menu_edit_paste"
+                    android:title="@string/menu_edit_paste"
+                    app:showAsAction="ifRoom" />
+            </group>
+
+            <group android:id="@+id/group_secondary" android:visible="true">
+                <item
+                    android:id="@+id/menu_find_normal"
+                    android:title="@string/menu_find_normal"
+                    app:showAsAction="ifRoom" />
+                <item
+                    android:id="@+id/menu_find_replace"
+                    android:title="@string/menu_find_replace"
+                    app:showAsAction="ifRoom" />
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>
