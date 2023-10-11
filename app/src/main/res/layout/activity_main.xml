@@ -8,4 +8,15 @@
     tools:context=".MainActivity" >
 
 
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="OnClickShowThirdActivity"
+        android:text="@string/button_show_third_activity" />
 </LinearLayout>

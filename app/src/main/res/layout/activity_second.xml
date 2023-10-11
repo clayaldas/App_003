@@ -54,4 +54,47 @@
         android:layout_height="wrap_content"
         android:text="@string/button_add_text"
         tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/buttonSubstract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSubtract"
+        android:text="@string/button_subtract_text" />
+
+    <Button
+        android:id="@+id/buttonMutiply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickMultiply"
+        android:text="@string/button_multiply_text" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickDivide"
+        android:text="@string/button_divide_text" />
+
+    <Button
+        android:id="@+id/buttonPow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickPow"
+        android:text="@string/button_pow_text" />
+
+    <Button
+        android:id="@+id/buttonFactorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickFactorial"
+        android:text="@string/button_factorial_text" />
+
+    <Button
+        android:id="@+id/buttonShowSecondActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickShowSecondActivity"
+        android:text="@string/button_show_second_activity_text" />
+
 </LinearLayout>
