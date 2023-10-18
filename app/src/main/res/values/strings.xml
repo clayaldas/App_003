@@ -18,5 +18,16 @@
     <string name="button_show_second_activity_text">Mostrar segunda actividad</string>
     <string name="button_show_third_activity">Mostrar tercer activity</string>
 
+    <string name="textview_list_text">Lista de valores</string>
+    <string name="button_browser_text">Mostrar navegador</string>
+    <string name="button_call_phone_text">Realizar llamada</string>
+    <string name="button_show_main_activity_text">Mostrar activity</string>
+
+    <string name="menu_file_">Archivo</string>
+    <string name="menu_file_show_browser">Mostrar navegador</string>
+    <string name="menu_file_call_phone">Realizar llamada</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_finish">Cerrar</string>
+
 
 </resources>
