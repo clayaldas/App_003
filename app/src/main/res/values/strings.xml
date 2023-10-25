@@ -23,11 +23,16 @@
     <string name="button_call_phone_text">Realizar llamada</string>
     <string name="button_show_main_activity_text">Mostrar activity</string>
 
-    <string name="menu_file_">Archivo</string>
+    <string name="menu_file">Archivo</string>
     <string name="menu_file_show_browser">Mostrar navegador</string>
     <string name="menu_file_call_phone">Realizar llamada</string>
     <string name="menu_about">Acerca de</string>
     <string name="menu_finish">Cerrar</string>
+
+    <string name="menu_edit">Editar</string>
+    <string name="menu_edit_copy">Copiar</string>
+    <string name="menu_edit_cut">Cortar</string>
+    <string name="menu_edit_paste">Pegar</string>
 
 
 </resources>

@@ -1,21 +1,34 @@
 package uta.fisei.app_003;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.UiAutomation;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.Toolbar;
+
 public class FirstActivity extends AppCompatActivity {
+
+    private EditText editTextName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+
+        editTextName = findViewById(R.id.editTextName);
+
+        registerForContextMenu(editTextName);
     }
 
     public void onClickButtonBrowser(View view) {
@@ -57,8 +70,56 @@ public class FirstActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_principal, menu);
-        return true;
-        //return super.onCreateOptionsMenu(menu);
+       getMenuInflater().inflate(R.menu.menu_principal, menu);
+       return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+
+        int id = item.getItemId();
+
+        /*
+        if (id == R.id.menuAbout) {
+            Toast.makeText(this, "Bienvendido a la App", Toast.LENGTH_SHORT).show();
+        }
+         */
+
+
+        switch (id) {
+            case R.id.menuEditPaste:
+                Toast.makeText(this, "Presiono en la opción Pegar", Toast.LENGTH_SHORT).show();
+            case R.id.menuAbout:
+                Toast.makeText(this, "Bienvendido a la App", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menuFinish:
+                finish();
+                break;
+        }
+
+
+
+        //return true;
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.menu_contextual, menu);
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.menuContextualEditCopy:
+                Toast.makeText(this, "Presiono en Copiar", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+        return super.onContextItemSelected(item);
     }
 }

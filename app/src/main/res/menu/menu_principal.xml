@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FirstActivity">
 
-    <item android:id="@+id/menuFile" android:title="@string/menu_file_"/>
-    <item android:id="@+id/menuAbout" android:title="@string/menu_about"/>
+    <item android:id="@+id/menuFile" android:title="@string/menu_file" app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/submenuEdit" android:title="@string/menu_edit">
+        <menu>
+            <group android:id="@+id/menuGroupEdit">
+                <item android:id="@+id/menuEditCopy" android:title="@string/menu_edit_copy"
+                    android:icon="@android:drawable/btn_dialog" />
+                <item android:id="@+id/menuEditCut" android:title="@string/menu_edit_cut" />
+                <item android:id="@+id/menuEditPaste" android:title="@string/menu_edit_paste" />
+            </group>
+
+            <group android:id="@+id/menuGroupFind">
+                <item android:id="@+id/menuEditSearch" android:title="@string/menu_edit_copy"
+                    android:icon="@android:drawable/btn_dialog" />
+                <item android:id="@+id/menuEdiFind" android:title="@string/menu_edit_cut" />
+
+            </group>
+        </menu>
+
+    </item>
+
+
+    <item android:id="@+id/menuAbout" android:title="@string/menu_about" />
     <item android:id="@+id/menuFinish" android:title="@string/menu_finish"/>
 
 </menu>
